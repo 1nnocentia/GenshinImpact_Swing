@@ -19,6 +19,7 @@ public abstract class CharacterGridPanel extends AbstractContentPanel {
     private JPanel createCharacterCard(String name) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        panel.setBorder(BorderFactory.createEmptyBorder(12, 12, 12, 12));
         panel.setBackground(Color.WHITE);
         panel.setPreferredSize(new Dimension(200,250));
         panel.setMaximumSize(new Dimension(200,250));

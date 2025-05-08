@@ -13,12 +13,17 @@ public class App extends JFrame {
         setTitle("GenshinImpactWiki");
         setSize(1200,700);
         setLocationRelativeTo(null);
+        setUndecorated(true);
 
         TopPanel topPanel = new TopPanel();
         add(topPanel, BorderLayout.NORTH);
 
         MainView mainView = new MainView();
         add(mainView, BorderLayout.CENTER);
+
+        ResizeListener resizeListener = new ResizeListener(this);
+        addMouseListener(resizeListener);
+        addMouseMotionListener(resizeListener);
     }
 
     

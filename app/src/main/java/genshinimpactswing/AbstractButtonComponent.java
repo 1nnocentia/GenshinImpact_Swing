@@ -15,6 +15,7 @@ public abstract class AbstractButtonComponent {
         button.setForeground(Color.WHITE);
         button.setFont(new Font("Arial", Font.PLAIN, 14));
         button.setFocusPainted(false);
+        button.setBorderPainted(false);
         addAction();
     }
 

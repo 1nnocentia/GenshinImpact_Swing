@@ -22,14 +22,14 @@ public class MainView extends JPanel{
 
         contentPanels = new HashMap<>();
         contentPanels.put("Home", new HomePanel());
-        contentPanels.put("Characters", new CharacterGridPanel());
-        contentPanels.put("Anemo", new CharacterGridPanel());
-        contentPanels.put("Cyro", new CharacterGridPanel());
-        contentPanels.put("Dendro", new CharacterGridPanel());
-        contentPanels.put("Electro", new CharacterGridPanel());
-        contentPanels.put("Geo", new CharacterGridPanel());
-        contentPanels.put("Hydro", new CharacterGridPanel());
-        contentPanels.put("Pyro", new CharacterGridPanel());
+        contentPanels.put("Characters", new Characters());
+        // contentPanels.put("Anemo", new CharacterGridPanel());
+        // contentPanels.put("Cyro", new CharacterGridPanel());
+        // contentPanels.put("Dendro", new CharacterGridPanel());
+        // contentPanels.put("Electro", new CharacterGridPanel());
+        // contentPanels.put("Geo", new CharacterGridPanel());
+        // contentPanels.put("Hydro", new CharacterGridPanel());
+        // contentPanels.put("Pyro", new CharacterGridPanel());
 
         showContent("Characters");
 

@@ -3,17 +3,15 @@ package genshinimpactswing;
 import javax.swing.*;
 import java.awt.*;
 
-public class CharacterGridPanel extends AbstractContentPanel {
-    private static final String[] CHARACTER_NAMES = {
-        "Albedo", "Alhaitham", "Aloy", "Arataki Itto", "Baizhu", "Barbara", "Bennett",
-        "Diona", "Ganyu", "Jean", "Kamisato Ayaka", "Kamisato Ayato", "Klee", "Kujou Sara", "Nahida"
-    };
+public abstract class CharacterGridPanel extends AbstractContentPanel {
+    protected abstract String[] getCharacterNames();
 
     @Override
     protected void initUI() {
         setLayout(new GridLayout(0, 4, 10, 10));
+        setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         setBackground(new Color(87, 87, 81));
-        for (String name : CHARACTER_NAMES) {
+        for (String name : getCharacterNames()) {
             add(createCharacterCard(name));
         }
     }
@@ -29,7 +27,7 @@ public class CharacterGridPanel extends AbstractContentPanel {
         Image scaleImg = oriImg.getImage().getScaledInstance(180, 230, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaleImg);
 
-        JLabel imgLabel = new JLabel(scaledIcon);
+        JLabel imgLabel = new JLabel(scaledIcon, JLabel.CENTER);
         JLabel nameLabel = new JLabel(name, JLabel.CENTER);
 
         panel.add(imgLabel, BorderLayout.CENTER);

@@ -3,12 +3,29 @@
  */
 package genshinimpactswing;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
+import javax.swing.*;
+
+import java.awt.*;
+
+public class App extends JFrame {
+
+    public App(){
+        setTitle("GenshinImpactWiki");
+        setSize(1200,700);
+        setLocationRelativeTo(null);
+
+        TopPanel topPanel = new TopPanel();
+        add(topPanel, BorderLayout.NORTH);
+
+        MainView mainView = new MainView();
+        add(mainView, BorderLayout.CENTER);
     }
 
+    
+
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        SwingUtilities.invokeLater(() -> {
+            new App().setVisible(true);
+        });
     }
 }

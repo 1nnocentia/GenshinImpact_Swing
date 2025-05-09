@@ -27,7 +27,7 @@ public abstract class CharacterGridPanel extends AbstractContentPanel {
         panel.setMaximumSize(new Dimension(200,250));
 
         ImageIcon oriImg = new ImageIcon(getClass().getResource("/img/" + name + ".png"));
-        Image scaleImg = oriImg.getImage().getScaledInstance(180, 230, Image.SCALE_SMOOTH);
+        Image scaleImg = oriImg.getImage().getScaledInstance(180, -1, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaleImg);
 
         JLabel imgLabel = new JLabel(scaledIcon, JLabel.CENTER);

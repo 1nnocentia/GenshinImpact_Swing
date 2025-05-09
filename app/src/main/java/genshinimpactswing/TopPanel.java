@@ -5,10 +5,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.*;
 
-import genshinimpactswing.AbstractButtonComponent;
-import genshinimpactswing.DiscordButton;
-import genshinimpactswing.KofiButton;
-
 public class TopPanel extends JPanel {
     public TopPanel() {
         setLayout(new BorderLayout());
@@ -25,8 +21,8 @@ public class TopPanel extends JPanel {
         AbstractButtonComponent discordBtn = new DiscordButton();
         AbstractButtonComponent kofiBtn = new KofiButton();
 
-        buttonPanel.add(discordBtn.getButton());
-        buttonPanel.add(kofiBtn.getButton());
+        buttonPanel.add(discordBtn);
+        buttonPanel.add(kofiBtn);
 
         add(titleLabel, BorderLayout.WEST);
         add(buttonPanel, BorderLayout.EAST);

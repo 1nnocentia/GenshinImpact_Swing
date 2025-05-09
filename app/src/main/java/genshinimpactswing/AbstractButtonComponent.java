@@ -5,17 +5,16 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
-public abstract class AbstractButtonComponent {
-    protected JButton button;
+public abstract class AbstractButtonComponent extends JButton{
     
     public AbstractButtonComponent(String text, String hexColor) {
-        button = new JButton(text);
+        super(text);
         Color color = Color.decode(hexColor);
-        button.setBackground(color);
-        button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.PLAIN, 14));
-        button.setFocusPainted(false);
-        button.setBorderPainted(false);
+        setBackground(color);
+        setForeground(Color.WHITE);
+        setFont(new Font("Arial", Font.PLAIN, 14));
+        setFocusPainted(false);
+        setBorderPainted(false);
         addAction();
     }
 
@@ -23,7 +22,4 @@ public abstract class AbstractButtonComponent {
 
     }
 
-    public JButton getButton() {
-        return button;
-    }
 }

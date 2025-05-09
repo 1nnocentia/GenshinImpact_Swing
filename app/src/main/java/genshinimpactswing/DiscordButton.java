@@ -1,6 +1,5 @@
 package genshinimpactswing;
 
-import java.awt.Color;
 import java.awt.Desktop;
 import java.net.URI;
 
@@ -12,7 +11,7 @@ public class DiscordButton extends AbstractButtonComponent {
 
     @Override
     protected void addAction(){
-        button.addActionListener(e -> {
+        addActionListener(e -> {
             try {
                 Desktop.getDesktop().browse(new URI("https://discord.com"));
             } catch (Exception ex) {
